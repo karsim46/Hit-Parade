@@ -19,6 +19,7 @@ jobs:
       AWS_REGION: eu-west-2
     steps:
       - checkout
+      - sudo apt install python3
       - run: npm install
       - run: npm run build
       - aws-s3/sync:
